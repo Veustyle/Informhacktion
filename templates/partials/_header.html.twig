@@ -1,0 +1,24 @@
+<header class="header" id="header">
+    <nav class="navbar" id="navbar">
+        <a href="{{ path('home') }}" class="{% if app.request.get('_route') == 'home' %}link-active{% endif %}">Accueil</a>
+
+        <a href="{{ path('games') }}" class="{% if app.request.get('_route') == 'games' %}link-active{% endif %}">Games</a>
+
+
+        <div class="menu-svg">
+            <div class="menu1">
+                <svg><use href="img/sprite.svg#list"></use></svg>
+            </div>
+            <div class="menu2">
+                <svg id="svg-exit"><use href="img/sprite.svg#exit"></use></svg>
+            </div>
+        </div>
+
+        <div class="menu-deroulant">
+            <a href="{{ path('home') }}">Accueil</a>
+
+            <a href="{{ path('games') }}">Games</a>
+        </div>
+
+    </nav>
+</header>

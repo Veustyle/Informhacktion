@@ -1,0 +1,508 @@
+{
+    "size": {
+      "width": 10,
+      "height": 10
+    },
+    "listSquare": [
+        {
+            "x": 0,
+            "y": 0,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 0,
+            "y": 3,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 0,
+            "y": 4,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 0,
+            "y": 5,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 0,
+            "y": 6,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 0,
+            "y": 7,
+            "imgKey": "BUSH"
+        },
+        {
+            "x": 0,
+            "y": 8,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 0,
+            "y": 9,
+            "imgKey": "BUSH"
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "imgKey": "WATER"
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "imgKey": "TREE"
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 1,
+            "y": 3,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 1,
+            "y": 4,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 1,
+            "y": 5,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 1,
+            "y": 6,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 1,
+            "y": 7,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 1,
+            "y": 8,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 1,
+            "y": 9,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "imgKey": "WATER"
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "imgKey": "WATER"
+        },
+        {
+            "x": 2,
+            "y": 2,
+            "imgKey": "TREE"
+        },
+        {
+            "x": 2,
+            "y": 3,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 2,
+            "y": 4,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 2,
+            "y": 5,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 2,
+            "y": 6,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 2,
+            "y": 7,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 2,
+            "y": 8,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 2,
+            "y": 9,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 3,
+            "y": 0,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 3,
+            "y": 1,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 3,
+            "y": 2,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 3,
+            "y": 3,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 3,
+            "y": 4,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 3,
+            "y": 5,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 3,
+            "y": 6,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 3,
+            "y": 7,
+            "imgKey": "BUSH"
+        },
+        {
+            "x": 3,
+            "y": 8,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 3,
+            "y": 9,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 4,
+            "y": 0,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 4,
+            "y": 1,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 4,
+            "y": 2,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 4,
+            "y": 3,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 4,
+            "y": 4,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 4,
+            "y": 5,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 4,
+            "y": 6,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 4,
+            "y": 7,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 4,
+            "y": 8,
+            "imgKey": "BUSH"
+        },
+        {
+            "x": 4,
+            "y": 9,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 5,
+            "y": 0,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 5,
+            "y": 1,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 5,
+            "y": 2,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 5,
+            "y": 3,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 5,
+            "y": 4,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 5,
+            "y": 5,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 5,
+            "y": 6,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 5,
+            "y": 7,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 5,
+            "y": 8,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 5,
+            "y": 9,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 6,
+            "y": 0,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 6,
+            "y": 1,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 6,
+            "y": 2,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 6,
+            "y": 3,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 6,
+            "y": 4,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 6,
+            "y": 5,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 6,
+            "y": 6,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 6,
+            "y": 7,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 6,
+            "y": 8,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 6,
+            "y": 9,
+            "imgKey": "GROUND"
+        },
+        {
+            "x": 7,
+            "y": 0,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 7,
+            "y": 1,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 7,
+            "y": 2,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 7,
+            "y": 3,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 7,
+            "y": 4,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 7,
+            "y": 5,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 7,
+            "y": 6,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 7,
+            "y": 7,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 7,
+            "y": 8,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 7,
+            "y": 9,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 8,
+            "y": 0,
+            "imgKey": "WATER"
+        },
+        {
+            "x": 8,
+            "y": 1,
+            "imgKey": "WATER"
+        },
+        {
+            "x": 8,
+            "y": 2,
+            "imgKey": "WATER"
+        },
+        {
+            "x": 8,
+            "y": 3,
+            "imgKey": "WATER"
+        },
+        {
+            "x": 8,
+            "y": 4,
+            "imgKey": "WATER"
+        },
+        {
+            "x": 8,
+            "y": 5,
+            "imgKey": "WATER"
+        },
+        {
+            "x": 8,
+            "y": 6,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 8,
+            "y": 7,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 8,
+            "y": 8,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 8,
+            "y": 9,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 9,
+            "y": 0,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 9,
+            "y": 1,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 9,
+            "y": 2,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 9,
+            "y": 3,
+            "imgKey": "WATER"
+        },
+        {
+            "x": 9,
+            "y": 4,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 9,
+            "y": 5,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 9,
+            "y": 6,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 9,
+            "y": 7,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 9,
+            "y": 8,
+            "imgKey": "GRASS"
+        },
+        {
+            "x": 9,
+            "y": 9,
+            "imgKey": "GRASS"
+        }
+    ]
+}

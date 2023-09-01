@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="./css/mmorpg.css">
+    <link rel="stylesheet" href="./css/games.css">
+{% endblock %}
+
+{% block javascripts %}<script src="./js/mmorpg/main.js" type="module"></script>{% endblock %}
+
+{% block body %}
+    {% include 'partials/_list-lang.html.twig' %}
+
+    <p>Le code est sur github (lien dans le footer)</p>
+
+    <div style="display: flex; justify-content: center; margin-bottom: 30px">
+        <div id="container">
+            <div id="console">
+                <canvas id="static-canvas">Erreur ?</canvas>
+                <canvas id="char-canvas">Erreur ?</canvas>
+            </div>
+        </div>
+    </div>
+{% endblock %}

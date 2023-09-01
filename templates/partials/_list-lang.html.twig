@@ -1,0 +1,10 @@
+<div class="container-list-lang">
+
+    <a href="{{ path('pacman') }}" class="{% if app.request.get('_route') == 'pacman' %}link-active{% endif %}">Pacman</a>
+
+
+    <a href="{{ path('mmorpg') }}" class="{% if app.request.get('_route') == 'mmorpg' %}link-active{% endif %}">Mmorpg</a>
+
+    <a href="{{ path('brickbreaker') }}" class="{% if app.request.get('_route') == 'brickbreaker' %}link-active{% endif %}">Brickbreaker</a>
+
+</div>

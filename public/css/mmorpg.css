@@ -1,0 +1,19 @@
+#container {
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+}
+#console {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+}
+#static-canvas, #char-canvas {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

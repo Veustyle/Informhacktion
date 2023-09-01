@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}<link rel="stylesheet" href="./css/games.css">{% endblock %}
+
+
+{% block javascripts %}<script src="./js/pacman/game.js" type="module"></script>{% endblock %}
+{% block body %}
+    {% include 'partials/_list-lang.html.twig' %}
+
+    <p>Le code est sur github (lien dans le footer)</p>
+
+    <div style="display: flex; justify-content: center">
+        <canvas style="margin: 30px" id="canvas" width="420" height="500"></canvas>
+        <div style="display:none;">
+            <img id="animation" src="./img/pacman/animations.gif" width="140" height="20">
+            <img id="ghosts" src="./img/pacman/ghost.png" width="140" height="20">
+        </div>
+    </div>
+{% endblock %}

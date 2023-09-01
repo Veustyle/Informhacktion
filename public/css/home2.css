@@ -1,0 +1,200 @@
+body {
+    color: #283655;
+    background: url('../img/header2.jpg');
+    background-size: contain;
+}
+h1 {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    opacity: .8;
+    transform: translateX(-300px);
+    transition: all 1s ease-out;
+}
+h2 {
+    font-family: 'Rambla', sans-serif;
+    text-align: center;
+    font-size: 2em;
+    transform: translateX(300px);
+    transition: all 1s ease-out;
+}
+h2, h3 {
+    font-family: 'Audiowide', sans-serif;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 1px #283655;
+}
+#line {
+    height: 1px;
+    background-color: #b3aca7;
+    width: 25%;
+    margin: 0 auto;
+}
+/**************** PRESENTATION ****************/
+.intro {
+    padding: 60px 0 50px 0;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+.container-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.infos {
+    font-family: 'Rambla', sans-serif;
+    font-size: 14px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 220px;
+    width: 250px;
+}
+.infos p {
+    align-self: center;
+}
+.infos svg {
+    width: 16px;
+    height: 16px;
+}
+.typed-div {
+    font-family: 'Rambla', sans-serif;
+    border: 1px solid black;
+    height: 300px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.typed-div p {
+    align-self: center;
+}
+.button {
+    font-family: 'Rambla', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 3px;
+}
+.button a {
+    padding: 20px 80px;
+    border: 1px solid black;
+    width: 300px;
+    text-transform: uppercase;
+}
+.button:hover a{
+    background: #b3aca7;
+    transition: all 0.3s ease-in-out;
+}
+/********************* LANGAGES *****************************/
+.languages-formations {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding-bottom: 80px;
+}
+#langages {
+    font-family: 'Rambla', sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(10, 159, 74) 0%, rgb(2, 173, 76) 52%, rgb(10, 159, 74) 100%);
+    clip-path: polygon(0 4%, 100% 0, 100% 98%, 0% 100%);
+    transition: all 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 650px;
+    width: 400px;
+    padding: 20px 20px 30px 20px;
+    margin-left: 20px;
+}
+#langages h3 {
+    transform: rotate(-7deg);
+}
+.bar {
+    font-weight: bold;
+}
+.bar img {
+    transform: translateY(3px);
+}
+.progress {
+    background-color: white;
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+.progress-bar-animated {
+    border-radius: 30px;
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size: 20px 20px;
+    animation: progress-bar-stripes 2s linear infinite;
+    border: 1px solid black;
+}
+@keyframes progress-bar-stripes {
+   from  { background-position: 0 0; }
+   to    { background-position: 40px 0; }
+ }
+/********************* FORMATIONS  *******************************/
+#formation {
+    font-family: 'Rambla', sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(19deg, rgba(0, 180, 219, 0.69) 0%, #0083b0 80%);
+    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 98%);
+    transition: all 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 650px;
+    width: 400px;
+    padding: 30px 20px;
+    margin-left: 20px;
+}
+#formation h3 {
+    transform: rotate(7deg);
+    text-align: center;
+}
+#formation h4 {
+    transform: translateX(20px);
+}
+#formation svg {
+    height: 50px;
+    width: 50px;
+    transform: translateY(10px);
+    padding-right: 10px;
+}
+.counter {
+    display: flex;
+    text-align: center;
+}
+.data {
+    border: 1px solid #35B4D5;
+    width: 140px;
+    margin: 0 4%;
+    box-shadow: 0 0 2px black;
+}
+/********************** MEDIA ************************/
+@media (max-width: 470px) {
+    .languages-formations {
+        display: flex;
+    }
+    #langages, #formation {
+        width:200px;
+    }
+}
+@media (max-width: 639px) {
+    .typed-div {
+        margin: 30px 10px;
+    }
+}
+@media (max-width: 978px) {
+    .formation {
+        margin-top: 30px;
+    }
+}
