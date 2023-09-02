@@ -7,13 +7,14 @@
 
         <title>{% block title %}{{ title }}{% endblock %}</title>
 
+
         <link rel="stylesheet" href="css/base.css">
-        {% block stylesheets %}
-        {% endblock %}
+        {% block stylesheets %}{% endblock %}
+
 
         <script src="js/home.js" type="module" defer></script>
-        {% block javascripts %}
-        {% endblock %}
+        {% block javascripts %}{% endblock %}
+
     </head>
     <body>
         {% include 'partials/_header.html.twig' %}
@@ -39,6 +40,7 @@
         {% endfor %}
 
         {% block body %}{% endblock %}
-    {% include 'partials/_footer.html.twig' %}
+
+        {% include 'partials/_footer.html.twig' %}
     </body>
 </html>

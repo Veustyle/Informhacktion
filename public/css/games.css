@@ -2,5 +2,5 @@ html {
     background: url("../img/contact.png") fixed;
 }
 body {
-    background-color: transparent;
+    background-color: transparent !important;
 }

@@ -108,5 +108,45 @@ svgExit.addEventListener('click', () => {
    arrayLiensMenuDeroulant.forEach(lien => {
       lien.style.opacity = '0';
    })
+})
 
+document.addEventListener('click', (event) => {
+   event.stopPropagation();
+   if (event.target !== menuFutur && menuFutur.style.display === "flex") {
+      svgExit.animate([
+            {opacity: 0},
+            {transform: 'rotate(0deg)'}
+         ],
+         {
+            duration: 100,
+            fill: 'forwards'
+         })
+
+      svgExit.style.display = 'none';
+      svgList.style.display = 'inline';
+      menuFutur.style.display = "none";
+
+      menuFutur.animate([
+            {width: '300px', height: '400px'},
+            {width: 0, height: 0},
+         ],
+         {
+            duration: 500,
+            fill: "forwards"
+         })
+
+      svgList.animate([
+            {opacity: 0},
+            {opacity: 1},
+            {transform: 'rotate(0deg)'}
+         ],
+         {
+            duration: 500,
+            fill: 'forwards'
+         });
+
+      arrayLiensMenuDeroulant.forEach(lien => {
+         lien.style.opacity = '0';
+      })
+   }
 })

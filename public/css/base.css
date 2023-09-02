@@ -81,9 +81,9 @@ p {
     border-right-color: transparent;
 }
 .navbar a:hover:before, .navbar a:hover:after, .navbar .link-active:after, .navbar .link-active:before {
-    border-color: black;
-    width: 100%;
-    height: 100%;
+    border-color: black !important;
+    width: 100% !important;
+    height: 100% !important;
 }
 /**************** MENU DEROULANT **************************/
 .menu-svg {
@@ -191,8 +191,8 @@ p {
     border-radius: 12px;
     padding: 5px 0 5px 0;
 }
-/******** LISTE LANGUAGES *******/
-.container-list-lang {
+/******** LISTE gamesUAGES *******/
+.container-list-games {
     padding: 3px;
     margin: 40px 20px 0 20px;
     border: 1px solid black;
@@ -200,7 +200,7 @@ p {
     justify-content: center;
     flex-wrap: wrap;
 }
-.container-list-lang a {
+.container-list-games a {
     position: relative;
     background-color: transparent;
     padding: 2px;
@@ -210,18 +210,18 @@ p {
     color: black;
     margin: 5px 5px 5px 5px;
 }
-.container-list-lang a:visited {
+.container-list-games a:visited {
     text-decoration: none;
 }
-.container-list-lang a:hover {
+.container-list-games a:hover {
     background-color: black;
     color: whitesmoke;
 }
-.container-list-lang .link-active {
+.container-list-games .link-active {
     background-color: black;
     color: whitesmoke;
 }
-.container-list-lang a:before, .container-list-lang a:after {
+.container-list-games a:before, .container-list-games a:after {
     content: '';
     display: block;
     position: absolute;
@@ -232,19 +232,19 @@ p {
     transition: all .3s ease;
     z-index: 1;
 }
-.container-list-lang a:before {
+.container-list-games a:before {
     top: 0;
     right: 0;
     border-bottom-color: transparent;
     border-left-color: transparent;
 }
-.container-list-lang a:after {
+.container-list-games a:after {
     bottom: 0;
     left: 0;
     border-top-color: transparent;
     border-right-color: transparent;
 }
-.container-list-lang a:hover:before, .container-list-lang a:hover:after, .container-list-lang .link-active:before, .container-list-lang .link-active:after {
+.container-list-games a:hover:before, .container-list-games a:hover:after, .container-list-games .link-active:before, .container-list-games .link-active:after {
     border-color: black;
     width: 100%;
     height: 100%;
