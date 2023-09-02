@@ -4,6 +4,14 @@
 
         <a href="{{ path('games') }}" class="{% if app.request.get('_route') == 'games' %}link-active{% endif %}">Games</a>
 
+        {% if app.user %}
+            <a href="{{ path('games') }}" class="{% if app.request.get('_route') == 'games' %}link-active{% endif %}">Logout</a>
+        {% else %}
+            <a href="{{ path('games') }}" class="{% if app.request.get('_route') == 'games' %}link-active{% endif %}">Login</a>
+            <a href="{{ path('games') }}" class="{% if app.request.get('_route') == 'games' %}link-active{% endif %}">Subscribe</a>
+        {% endif %}
+
+
         <div class="menu-svg">
             <div class="menu1">
                 <svg><use href="img/sprite.svg#list"></use></svg>
@@ -15,8 +23,13 @@
 
         <div class="menu-deroulant">
             <a href="{{ path('home') }}">Accueil</a>
-
             <a href="{{ path('games') }}">Games</a>
+            {% if app.user %}
+                <a href="{{ path('games') }}">Logout</a>
+            {% else %}
+                <a href="{{ path('games') }}">Login</a>
+                <a href="{{ path('games') }}">Subscribe</a>
+            {% endif %}
         </div>
 
     </nav>

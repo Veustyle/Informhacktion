@@ -16,4 +16,13 @@ class WebpackController extends AbstractController
             'h1' => 'WebpackController',
         ]);
     }
+
+   #[Route('/htmx', name: 'htmx')]
+   public function htmx(): Response
+   {
+      return $this->render('webpack/htmx.html.twig', [
+         'title' => 'htmx',
+         'h1' => 'htmx',
+      ]);
+   }
 }

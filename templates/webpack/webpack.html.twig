@@ -5,4 +5,20 @@
 
 {% block body %}
     {% include 'partials/_modal_connect.html.twig' %}
+
+    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+
+    <a
+            hx-target="#cible"
+            hx-get="{{ path('htmx') }}"
+            hx-swap="outerHTML"
+            href="{{ path('htmx') }}">HTMX</a>
+
+    <div id="cible">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aliquid aperiam, consequatur delectus dignissimos fugiat in laboriosam, odio possimus quae temporibus ullam velit voluptatibus voluptatum. Culpa delectus maxime voluptates!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aliquid aperiam, consequatur delectus dignissimos fugiat in laboriosam, odio possimus quae temporibus ullam velit voluptatibus voluptatum. Culpa delectus maxime voluptates!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aliquid aperiam, consequatur delectus dignissimos fugiat in laboriosam, odio possimus quae temporibus ullam velit voluptatibus voluptatum. Culpa delectus maxime voluptates!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aliquid aperiam, consequatur delectus dignissimos fugiat in laboriosam, odio possimus quae temporibus ullam velit voluptatibus voluptatum. Culpa delectus maxime voluptates!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias aliquid aperiam, consequatur delectus dignissimos fugiat in laboriosam, odio possimus quae temporibus ullam velit voluptatibus voluptatum. Culpa delectus maxime voluptates!</p>
+    </div>
 {% endblock %}
