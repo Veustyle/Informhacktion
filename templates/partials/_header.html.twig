@@ -5,10 +5,13 @@
         <a href="{{ path('games') }}" class="{% if app.request.get('_route') == 'games' %}link-active{% endif %}">Games</a>
 
         {% if app.user %}
-            <a href="{{ path('games') }}" class="{% if app.request.get('_route') == 'games' %}link-active{% endif %}">Logout</a>
+            {% if 'ROLE_ADMIN' in app.user.roles %}
+                <a href="{{ path('admin') }}">Admin</a>
+            {% endif %}
+            <a href="{{ path('logout') }}">Déconnexion</a>
         {% else %}
-            <a href="{{ path('games') }}" class="{% if app.request.get('_route') == 'games' %}link-active{% endif %}">Login</a>
-            <a href="{{ path('games') }}" class="{% if app.request.get('_route') == 'games' %}link-active{% endif %}">Subscribe</a>
+            <a href="{{ path('login') }}" class="{% if app.request.get('_route') == 'login' %}link-active{% endif %}">Connexion</a>
+            <a href="{{ path('register') }}" class="{% if app.request.get('_route') == 'register' %}link-active{% endif %}">Inscription</a>
         {% endif %}
 
 
@@ -25,10 +28,13 @@
             <a href="{{ path('home') }}">Accueil</a>
             <a href="{{ path('games') }}">Games</a>
             {% if app.user %}
-                <a href="{{ path('games') }}">Logout</a>
+                {% if 'ROLE_ADMIN' in app.user.roles %}
+                    <a href="{{ path('admin') }}">Admin</a>
+                {% endif %}
+                <a href="{{ path('logout') }}">Déconnexion</a>
             {% else %}
-                <a href="{{ path('games') }}">Login</a>
-                <a href="{{ path('games') }}">Subscribe</a>
+                <a href="{{ path('login') }}">Connexion</a>
+                <a href="{{ path('register') }}">Inscription</a>
             {% endif %}
         </div>
 
