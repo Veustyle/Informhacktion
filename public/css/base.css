@@ -33,6 +33,7 @@ p {
     transition: all .5s ease-in-out;
     background-color: lightgray;
     z-index: 50;
+    border-bottom: 2px solid black;
 }
 .navbar a {
     position: relative;
@@ -235,7 +236,7 @@ p {
     text-align: center;
 }
 .form-labels {
-    padding: 30px 0 0 0;
+    padding: 30px 0 5px 0;
 }
 .form-fields {
     height: 25px;
@@ -308,6 +309,20 @@ a:hover {
     top: 5px;
     padding: 0;
     margin: 0;
+}
+/*********** PROFIL-MODAL ************/
+#profil-modal {
+    position: fixed;
+    top: 15%;
+    bottom: 15%;
+    left: 25%;
+    right: 25%;
+    z-index: 50;
+    overflow: hidden;
+}
+#modal-content {
+    position: relative;
+    top: 0 ;
 }
 /*************** SCROLL BAR *********************/
 body::-webkit-scrollbar {
