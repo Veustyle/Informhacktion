@@ -20,7 +20,7 @@ class UserAuthenticator extends AbstractLoginFormAuthenticator
 {
     use TargetPathTrait;
 
-    public const LOGIN_ROUTE = 'login';
+    public const LOGIN_ROUTE = 'home';
 
     public function __construct(private UrlGeneratorInterface $urlGenerator)
     {
@@ -48,6 +48,14 @@ class UserAuthenticator extends AbstractLoginFormAuthenticator
             return new RedirectResponse($targetPath);
         }
 
+       echo <<<HTML
+         <script>
+            modalLogin.style.opacity = '0';
+            modalLogin.style.display = 'none';
+            modalRegister.style.opacity = '0';
+            modalRegister.style.display = 'none';
+         </script>;
+HTML;
        $request->getSession()->getFlashBag()->add('success', 'Vous êtes connecté');
         return new RedirectResponse($this->urlGenerator->generate('home'));
 

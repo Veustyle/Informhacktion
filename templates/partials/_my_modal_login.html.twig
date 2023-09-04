@@ -1,0 +1,30 @@
+<div class="form-container">
+
+    <button id="close-modal" style="position: absolute; top: 10px; right: 10px; cursor: pointer; background-color: darkred; color: whitesmoke; font-weight: bold; border-radius: 6px">X</button>
+
+    <h3 style="text-align: center; padding-top: 10px">Connexion</h3>
+
+    <form action="{{ path('home') }}" method="post">
+        {% if error is defined and error is not same as null %}
+            <div class="flash-errors">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+        <div class="form-labels">
+            <label for="inputUsername" class="form-labels">Nom d'utilisateur</label>
+        </div>
+        <div class="form-fields">
+            <input type="text" value="{{ last_username ?? '' }}" name="username" id="inputUsername" class="form-fields" autocomplete="username" required autofocus>
+        </div>
+
+        <div class="form-labels">
+            <label for="inputPassword" class="form-labels">Mot de passe</label>
+        </div>
+        <div class="form-fields">
+            <input type="password" name="password" id="inputPassword" class="form-fields" autocomplete="current-password" required>
+        </div>
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+        <button class="btn-submit" type="submit">Connexion</button>
+    </form>
+</div>

@@ -11,8 +11,8 @@
             {% endif %}
             <a href="{{ path('logout') }}">Déconnexion</a>
         {% else %}
-            <a href="{{ path('login') }}" class="{% if app.request.get('_route') == 'login' %}link-active{% endif %}">Connexion</a>
-            <a href="{{ path('register') }}" class="{% if app.request.get('_route') == 'register' %}link-active{% endif %}">Inscription</a>
+            <a href="#" id="modal-link-login">Connexion</a>
+            <a href="#" id="modal-link-register">Inscription</a>
         {% endif %}
 
 
@@ -34,10 +34,31 @@
                 {% endif %}
                 <a href="{{ path('logout') }}">Déconnexion</a>
             {% else %}
-                <a href="{{ path('login') }}">Connexion</a>
-                <a href="{{ path('register') }}">Inscription</a>
+                <a href="" id="modal-link-login">Connexion</a>
+                <a href="" id="modal-link-register">Inscription</a>
             {% endif %}
         </div>
 
     </nav>
 </header>
+
+
+{% if errors is defined and errors is not same as null %}
+    <div id="my-modal-login">
+        {% include 'partials/_my_modal_login.html.twig' %}
+    </div>
+{% else %}
+    <div id="my-modal-login" style="opacity: 0; display: none">
+        {% include 'partials/_my_modal_login.html.twig' %}
+    </div>
+{% endif %}
+
+{% if app.flashes('register-error') is empty %}
+    <div id="my-modal-register" style="opacity: 0; display: none">
+        {% include 'partials/_my_modal_register.html.twig' %}
+    </div>
+{% else %}
+    <div id="my-modal-register">
+        {% include 'partials/_my_modal_register.html.twig' %}
+    </div>
+{% endif %}

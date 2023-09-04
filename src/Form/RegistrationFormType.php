@@ -24,7 +24,8 @@ class RegistrationFormType extends AbstractType
    public function buildForm(FormBuilderInterface $builder, array $options): void
    {
       $builder
-         ->setAction($this->urlGenerator->generate('register'))
+         ->setAction($this->urlGenerator->generate('home'))
+         ->setMethod('get')
          ->add('username', TextType::class, [
             'attr' => [
                'class' => 'form-fields'
@@ -84,7 +85,6 @@ class RegistrationFormType extends AbstractType
       $resolver->setDefaults([
          'data_class' => User::class,
          'constraints' => [
-            new UniqueEntity(['fields' => 'username']),
             new UniqueEntity(['fields' => 'email']),
          ],
       ]);

@@ -20,39 +20,37 @@ use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
 
 class RegistrationController extends AbstractController
 {
-
    public function __construct(private readonly EmailVerifier $emailVerifier)
     {
-
     }
-
-    #[Route('/inscription', name: 'register')]
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, UserAuthenticator $authenticator, EntityManagerInterface $entityManager, MessageBusInterface $bus): Response
-    {
-        $user = new User();
-        $form = $this->createForm(RegistrationFormType::class, $user);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $user->setPassword($userPasswordHasher->hashPassword($user, $form->get('plainPassword')->getData()));
-
-            $entityManager->persist($user);
-            $entityManager->flush();
-
-            $bus->dispatch(new ValidEmail($user->getId()));
-
-            $this->addFlash('success', 'Vous êtes bien inscrit. N\'oubliez pas de confirmer votre adresse e-mail');
-            $userAuthenticator->authenticateUser($user, $authenticator, $request);
-            return $this->redirectToRoute('home');
-        }
-
-
-        return $this->render('registration/register.html.twig', [
-           'title' => 'Inscription',
-           'h1' => 'Inscription',
-            'registrationForm' => $form->createView(),
-        ]);
-    }
+//
+//    #[Route('/inscription', name: 'register')]
+//    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, UserAuthenticator $authenticator, EntityManagerInterface $entityManager, MessageBusInterface $bus): Response
+//    {
+//        $user = new User();
+//        $form = $this->createForm(RegistrationFormType::class, $user);
+//        $form->handleRequest($request);
+//
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $user->setPassword($userPasswordHasher->hashPassword($user, $form->get('plainPassword')->getData()));
+//
+//            $entityManager->persist($user);
+//            $entityManager->flush();
+//
+//            $bus->dispatch(new ValidEmail($user->getId()));
+//
+//            $this->addFlash('success', 'Vous êtes bien inscrit. N\'oubliez pas de confirmer votre adresse e-mail');
+//            $userAuthenticator->authenticateUser($user, $authenticator, $request);
+//            return $this->redirectToRoute('home');
+//        }
+//
+//
+//        return $this->render('registration/register.html.twig', [
+//           'title' => 'Inscription',
+//           'h1' => 'Inscription',
+//            'registrationForm' => $form->createView(),
+//        ]);
+//    }
 
     #[Route('/verify/email', name: 'verify.email')]
     public function verifyUserEmail(Request $request, TranslatorInterface $translator): Response

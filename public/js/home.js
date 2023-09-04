@@ -1,4 +1,11 @@
-import { menu_Apparition} from "./functions.js";
+import { menu_Apparition } from "./functions.js";
+
+// MODALS
+let modalLogin = document.getElementById('my-modal-login');
+let linkLogin = document.querySelectorAll('#modal-link-login');
+let modalRegister = document.getElementById('my-modal-register');
+let linkRegister = document.querySelectorAll('#modal-link-register');
+
 
 // NAVBAR & FOOTER
 const navbar = document.getElementById('navbar');
@@ -73,6 +80,57 @@ svgList.addEventListener('click', () => {
 // SVG EXIT
 svgExit.addEventListener('click', () => {
 
+   menuExit();
+
+   svgList.animate([
+         {opacity: 0},
+         {opacity: 1},
+         {transform: 'rotate(0deg)'}
+      ],
+      {
+         duration: 500,
+         fill: 'forwards'
+      });
+
+   arrayLiensMenuDeroulant.forEach(lien => {
+      lien.style.opacity = '0';
+   })
+})
+
+document.addEventListener('click', (event) => {
+   event.stopPropagation();
+   if (event.target !== menuFutur && menuFutur.style.display === "flex") {
+      menuExit();
+   }
+})
+
+
+// MODALS
+linkLogin.forEach(link => {
+   link.addEventListener('click', (event) => {
+      event.preventDefault();
+      modalLogin.style.display = 'block';
+      modalRegister.style.display = 'none';
+      setTimeout(() => {
+         modalLogin.style.opacity = '1';
+      }, 100);
+   })
+})
+
+
+linkRegister.forEach(link => {
+   link.addEventListener('click', (event) => {
+      event.preventDefault();
+      modalRegister.style.display = 'block';
+      modalLogin.style.display = 'none';
+      setTimeout(() => {
+         modalRegister.style.opacity = '1';
+      }, 100)
+   })
+})
+
+
+const menuExit = () => {
    svgExit.animate([
          {opacity: 0},
          {transform: 'rotate(0deg)'}
@@ -108,45 +166,15 @@ svgExit.addEventListener('click', () => {
    arrayLiensMenuDeroulant.forEach(lien => {
       lien.style.opacity = '0';
    })
-})
+}
 
-document.addEventListener('click', (event) => {
-   event.stopPropagation();
-   if (event.target !== menuFutur && menuFutur.style.display === "flex") {
-      svgExit.animate([
-            {opacity: 0},
-            {transform: 'rotate(0deg)'}
-         ],
-         {
-            duration: 100,
-            fill: 'forwards'
-         })
+let closeModals = document.querySelectorAll('#close-modal');
 
-      svgExit.style.display = 'none';
-      svgList.style.display = 'inline';
-      menuFutur.style.display = "none";
-
-      menuFutur.animate([
-            {width: '300px', height: '400px'},
-            {width: 0, height: 0},
-         ],
-         {
-            duration: 500,
-            fill: "forwards"
-         })
-
-      svgList.animate([
-            {opacity: 0},
-            {opacity: 1},
-            {transform: 'rotate(0deg)'}
-         ],
-         {
-            duration: 500,
-            fill: 'forwards'
-         });
-
-      arrayLiensMenuDeroulant.forEach(lien => {
-         lien.style.opacity = '0';
-      })
-   }
+closeModals.forEach(modal => {
+   modal.addEventListener('click', () => {
+      modalRegister.style.display = 'none';
+      modalRegister.style.opacity = '0';
+      modalLogin.style.display = 'none';
+      modalLogin.style.opacity = '0';
+   })
 })
