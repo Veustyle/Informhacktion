@@ -23,6 +23,8 @@ services:
     App\EventSubscriber\EventCompteur:
         arguments:
             $compteur: '@App\Service\Compteur'
+            $twig: '@twig'
+            $factory: '@form.factory'
         tags:
             - { name: 'kernel.event_subscriber' }
 
@@ -32,6 +34,6 @@ services:
 
     App\EventListener\MyCustomLogoutListener:
         tags:
-            - { name: 'kernel.event_listener', event: 'Symfony\Component\Security\Http\Event\LogoutEvent', dispatcher: security.event_dispatcher.main }
+            - { name: 'kernel.event_listener', event: 'Symfony\Component\Security\Http\Event\LogoutEvent', dispatcher: 'security.event_dispatcher.main' }
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

@@ -11,7 +11,8 @@ use Twig\Environment;
 
 class EventCompteur implements EventSubscriberInterface
 {
-   public function __construct (private readonly Compteur $compteur, private readonly Environment $twig, private readonly FormFactoryInterface $factory) {}
+   public function __construct (private readonly Compteur $compteur, private readonly Environment $twig, private readonly FormFactoryInterface $factory)
+   {}
 
    public static function getSubscribedEvents(): array
    {
