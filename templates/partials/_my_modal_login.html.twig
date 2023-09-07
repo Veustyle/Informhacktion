@@ -23,7 +23,7 @@
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
         <div style="display: flex; flex-direction: column;">
-            <a href="{{ path('app_forgot_password_request') }}">GoogleConnect</a>
+            <a href="{{ path('connect_google') }}">GoogleConnect</a>
             <a href="{{ path('app_forgot_password_request') }}" style="margin-top: 20px">Mot de passe oublié</a>
         </div>
         <button class="btn-submit" type="submit">Connexion</button>
