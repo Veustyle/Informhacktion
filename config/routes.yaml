@@ -7,8 +7,3 @@ controllers:
 kernel:
     resource: App\Kernel
     type: attribute
-
-
-verify.email:
-    path: /verify/email
-    controller: App\Controller\RegistrationController::verifyUserEmail

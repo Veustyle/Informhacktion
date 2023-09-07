@@ -146,7 +146,6 @@ p {
 /******** FLASHS *********/
 .flash-success {
     text-align: center;
-    margin: 10px;
     background-color: lightgreen;
     border-radius: 12px;
     padding: 5px 0 5px 0;
@@ -158,13 +157,16 @@ p {
     background-color: lightblue;
     border-radius: 12px;
     padding: 5px 0 5px 0;
+    margin: 50px 0 -50px 0;
 }
 .flash-errors {
     text-align: center;
     margin: 10px;
     background-color: palevioletred;
+    color: whitesmoke;
     border-radius: 12px;
     padding: 5px 0 5px 0;
+    margin: 50px 0 -50px 0;
 }
 /******** LISTE GAMES *******/
 .container-list-games {

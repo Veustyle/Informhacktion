@@ -22,6 +22,7 @@ class HomeController extends AbstractController
     #[Route('/', name: 'home')]
     public function index(Request $request, AuthenticationUtils $authenticationUtils, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager, MessageBusInterface $bus, UserAuthenticator $authenticator, UserAuthenticatorInterface $userAuthenticator): Response
     {
+
        $error = $authenticationUtils -> getLastAuthenticationError();
        $lastUsername = $authenticationUtils -> getLastUsername();
 

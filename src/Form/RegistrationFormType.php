@@ -33,7 +33,7 @@ class RegistrationFormType extends AbstractType
             'label' => 'Nom d\'utilisateur',
             'label_attr' => [
                'class' => 'form-labels'
-            ]
+            ],
          ])
          ->add('email', EmailType::class, [
             'attr' => [
@@ -86,6 +86,7 @@ class RegistrationFormType extends AbstractType
          'data_class' => User::class,
          'constraints' => [
             new UniqueEntity(['fields' => 'email']),
+            new UniqueEntity(['fields' => 'username']),
          ],
       ]);
    }

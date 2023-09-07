@@ -1,11 +1,6 @@
-{% for flash_error in app.flashes('errors') %}
-    <div class="flash-errors" role="alert">
-        {{ flash_error }}
-        {{ form_errors(registrationForm) }}
-    </div>
-{% endfor %}
 
 <div class="form-container">
+
     <button id="close-modal" style="position: absolute; top: 10px; right: 10px; cursor: pointer; background-color: darkred; color: whitesmoke; font-weight: bold; border-radius: 6px">X</button>
 
     <h3 style="text-align: center; padding-top: 10px; margin-bottom: 20px">Inscription</h3>
