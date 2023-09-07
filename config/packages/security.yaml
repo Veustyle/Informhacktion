@@ -20,7 +20,9 @@ security:
                 login_path: home
                 check_path: home
                 enable_csrf: true
-            custom_authenticator: App\Security\UserAuthenticator
+            custom_authenticators:
+                - App\Security\UserAuthenticator
+                - App\Security\GoogleAuthenticator
             entry_point: form_login
             logout:
                 path: logout

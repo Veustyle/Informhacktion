@@ -9,6 +9,7 @@
             {% if 'ROLE_ADMIN' in app.user.roles %}
                 <a href="{{ path('admin') }}">Admin</a>
             {% endif %}
+            <a href="{{ path('stripe.payment') }}">Premium</a>
             <a href="{{ path('logout') }}">Déconnexion</a>
         {% else %}
             <a href="#" id="modal-link-login">Connexion</a>

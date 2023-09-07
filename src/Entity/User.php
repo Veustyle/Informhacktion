@@ -43,6 +43,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface {
    #[ORM\Column( type: 'boolean' )]
    private bool $isVerified = false;
 
+   #[ORM\Column(length: 255, nullable: true)]
+   private ?string $googleId = null;
+
+   #[ORM\Column(nullable: true)]
+   private ?bool $isPremium = false;
+
 
    public function __construct () {
       $this -> updatedAt = new \DateTimeImmutable();
@@ -133,5 +139,29 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface {
       $this -> isVerified = $isVerified;
 
       return $this;
+   }
+
+   public function getGoogleId(): ?string
+   {
+       return $this->googleId;
+   }
+
+   public function setGoogleId(?string $googleId): static
+   {
+       $this->googleId = $googleId;
+
+       return $this;
+   }
+
+   public function isIsPremium(): ?bool
+   {
+       return $this->isPremium;
+   }
+
+   public function setIsPremium(?bool $isPremium): static
+   {
+       $this->isPremium = $isPremium;
+
+       return $this;
    }
 }
