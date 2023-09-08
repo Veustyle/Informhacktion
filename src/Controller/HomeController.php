@@ -35,7 +35,6 @@ class HomeController extends AbstractController
              $this->addFlash('register-error', 'yes');
           } else {
              $user -> setPassword($userPasswordHasher -> hashPassword($user, $form -> get('plainPassword') -> getData()));
-
              $entityManager -> persist($user);
              $entityManager -> flush();
 

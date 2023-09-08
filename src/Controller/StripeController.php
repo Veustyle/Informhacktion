@@ -25,13 +25,13 @@ class StripeController extends AbstractController
                'product_data' => [
                   'name' => 'PremiumMember'
                ],
-               'unit_amount' => 2000
+               'unit_amount' => 200
                ],
                'quantity' => 1
          ]],
          'mode' => 'payment',
-         'success_url' => $this->generateUrl('stripe.success'),
-         'cancel_url' => $this->generateUrl('stripe.cancel'),
+         'success_url' => "https://informhacktion.com/stripe-success",
+         'cancel_url' => "https://informhacktion.com/stripe-cancel",
       ]);
 
 
@@ -44,6 +44,7 @@ class StripeController extends AbstractController
       $user = $this->getUser();
       if ($user) {
          $user->setIsPremium(true);
+         $user->setRoles(['ROLE_USER', 'ROLE_PREMIUM']);
          $this->addFlash('success', "Le paiement Stripe a bien été effectué");
          $entityManager->persist($user);
          $entityManager->flush();

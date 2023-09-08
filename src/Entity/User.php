@@ -46,6 +46,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface {
    #[ORM\Column(length: 255, nullable: true)]
    private ?string $googleId = null;
 
+   #[ORM\Column(type: 'string', length: 255, nullable: true)]
+   private ?string $hostedDomain;
+
    #[ORM\Column(nullable: true)]
    private ?bool $isPremium = false;
 
@@ -163,5 +166,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface {
        $this->isPremium = $isPremium;
 
        return $this;
+   }
+
+   public function getHostedDomain () : ?string {
+      return $this -> hostedDomain;
+   }
+
+   public function setHostedDomain (?string $hostedDomain) : void {
+      $this -> hostedDomain = $hostedDomain;
    }
 }
