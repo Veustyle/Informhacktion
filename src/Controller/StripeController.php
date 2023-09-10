@@ -44,7 +44,7 @@ class StripeController extends AbstractController
       $user = $this->getUser();
       if ($user) {
          $user->setIsPremium(true);
-         $user->setRoles(['ROLE_USER', 'ROLE_PREMIUM']);
+         $user->addRoles(['ROLE_PREMIUM']);
          $this->addFlash('success', "Le paiement Stripe a bien été effectué");
          $entityManager->persist($user);
          $entityManager->flush();
