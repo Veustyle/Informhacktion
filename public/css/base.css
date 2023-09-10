@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     box-sizing: border-box;
     background-color: whitesmoke;
-    font-family: 'ADLaM Display', cursive;
+    font-family: DM Sans,Roboto,sans-serif!important;
     color: black;
 }
 h1 {
