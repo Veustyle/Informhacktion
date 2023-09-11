@@ -4,7 +4,7 @@ use Symfony\Component\Process\Process;
 
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
 
-$consolePath = "../bin/console";
+$consolePath = dirname(__DIR__) . "/bin/console";
 
 
 $command = [
