@@ -1,5 +1,9 @@
 <?php
 
+use Symfony\Component\Process\Process;
+
+require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
+
 $consolePath = "../bin/console";
 
 
@@ -10,6 +14,6 @@ $command = [
    'async',
    '--limit=0'
 ];
+$process = new Process($command);
 
-$process = new Symfony\Component\Process($command);
 $process->start();
