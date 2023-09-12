@@ -5,19 +5,24 @@ namespace App\Controller;
 use App\Entity\Youtube;
 use App\Repository\YoutubeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class YoutubeController extends AbstractController
 {
     #[Route('/videos', name: 'youtube')]
-    public function index(YoutubeRepository $repository): Response
+    public function index(YoutubeRepository $repository, Request $request): Response
     {
-        $videos = $repository->findAll();
+        $offset = max(0, $request->query->getInt('offset', 0));
+        $videos = $repository->findPaginated($offset);
+
         return $this->render('youtube/index.html.twig', [
             'title' => 'Videos',
             'h1' => 'Videos',
-           'videos' => $videos
+            'videos' => $videos,
+            'previous' => $offset - YoutubeRepository::PAGINATOR_PER_PAGE,
+            'next' => min(count($videos), $offset + YoutubeRepository::PAGINATOR_PER_PAGE)
         ]);
     }
 
