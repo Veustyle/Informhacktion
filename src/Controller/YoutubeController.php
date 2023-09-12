@@ -25,8 +25,8 @@ class YoutubeController extends AbstractController
    public function show (Youtube $youtube): Response
    {
       return $this->render('youtube/show.html.twig', [
-         'title' => 'Video ' . $youtube->getDescription(),
-         'h1' => 'Videos ' . $youtube->getDescription(),
+         'title' => $youtube->getDescription(),
+         'h1' => $youtube->getDescription(),
          'video' => $youtube
       ]);
    }
