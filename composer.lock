@@ -4,8 +4,55 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7bd88989dd56b55dc9518999d758dbde",
+    "content-hash": "9b5e7530ed10b6f981f0bc6b1df394aa",
     "packages": [
+        {
+            "name": "copadia/php-video-url-parser",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Copadia-team/php-video-url-parser.git",
+                "reference": "dc5bbefe56b9437073077204d1739e90235572cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Copadia-team/php-video-url-parser/zipball/dc5bbefe56b9437073077204d1739e90235572cd",
+                "reference": "dc5bbefe56b9437073077204d1739e90235572cd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": ">= 1.0",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RicardoFiorani\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ricardo Fiorani",
+                    "email": "ricardo.fiorani@gmail.com"
+                },
+                {
+                    "name": "Philippe Ferreira",
+                    "email": "philippe.ferreira@copadia.com"
+                }
+            ],
+            "description": "A Simple and efficient PHP Video URL Parser that gives you thumbnails and embed codes for various services as Youtube, Vimeo, DailyMotion and Facebook",
+            "support": {
+                "source": "https://github.com/Copadia-team/php-video-url-parser/tree/v1.0.3"
+            },
+            "time": "2019-09-12T13:51:59+00:00"
+        },
         {
             "name": "doctrine/cache",
             "version": "2.2.0",
@@ -1322,16 +1369,16 @@
         },
         {
             "name": "easycorp/easyadmin-bundle",
-            "version": "v4.7.3",
+            "version": "v4.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EasyCorp/EasyAdminBundle.git",
-                "reference": "59247db60f035d3884254fd523764bf3fe70dfc9"
+                "reference": "60e04377612ce4d63ad833209127541caaf7e93b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/59247db60f035d3884254fd523764bf3fe70dfc9",
-                "reference": "59247db60f035d3884254fd523764bf3fe70dfc9",
+                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/60e04377612ce4d63ad833209127541caaf7e93b",
+                "reference": "60e04377612ce4d63ad833209127541caaf7e93b",
                 "shasum": ""
             },
             "require": {
@@ -1404,7 +1451,7 @@
             ],
             "support": {
                 "issues": "https://github.com/EasyCorp/EasyAdminBundle/issues",
-                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.7.3"
+                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.7.6"
             },
             "funding": [
                 {
@@ -1412,7 +1459,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-03T11:24:24+00:00"
+            "time": "2023-09-07T06:13:39+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -2312,16 +2359,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.23.1",
+            "version": "1.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "846ae76eef31c6d7790fac9bc399ecee45160b26"
+                "reference": "3510b0a6274cc42f7219367cb3abfc123ffa09d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/846ae76eef31c6d7790fac9bc399ecee45160b26",
-                "reference": "846ae76eef31c6d7790fac9bc399ecee45160b26",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/3510b0a6274cc42f7219367cb3abfc123ffa09d6",
+                "reference": "3510b0a6274cc42f7219367cb3abfc123ffa09d6",
                 "shasum": ""
             },
             "require": {
@@ -2353,9 +2400,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.23.1"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.0"
             },
-            "time": "2023-08-03T16:32:59+00:00"
+            "time": "2023-09-07T20:46:32+00:00"
         },
         {
             "name": "psr/cache",
@@ -2869,16 +2916,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v12.1.0",
+            "version": "v12.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "8ef18513811e3ad0cac50f699deac4032409ae07"
+                "reference": "07829f2102362b0bfe0b680dab801e00cc4dce89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/8ef18513811e3ad0cac50f699deac4032409ae07",
-                "reference": "8ef18513811e3ad0cac50f699deac4032409ae07",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/07829f2102362b0bfe0b680dab801e00cc4dce89",
+                "reference": "07829f2102362b0bfe0b680dab801e00cc4dce89",
                 "shasum": ""
             },
             "require": {
@@ -2924,9 +2971,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/v12.1.0"
+                "source": "https://github.com/stripe/stripe-php/tree/v12.2.0"
             },
-            "time": "2023-08-31T20:23:14+00:00"
+            "time": "2023-09-07T18:03:22+00:00"
         },
         {
             "name": "symfony/apache-pack",

@@ -1,19 +1,19 @@
 <?php
 
+use App\Kernel;
 use Symfony\Component\Process\Process;
 
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
 
-$consolePath = dirname(__DIR__) . "/bin/console";
-
+$kernel = new Kernel();
 
 $command = [
    'php',
-   $consolePath,
+   'bin/console',
    'messenger:consume',
    'async',
-   '--limit=0'
+   '--limit=3'
 ];
 $process = new Process($command);
-
+$process->setWorkingDirectory($kernel->getProjectDir());
 $process->start();

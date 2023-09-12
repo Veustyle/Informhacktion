@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/youtube.css">
+{% endblock %}
+
+{% block body %}
+    <div class="container-video-full">
+        <div class="card-video-full">
+
+            <div class="card-video-category-full">
+                <p>Catégorie : {{ video.category }}</p>
+            </div>
+
+            <div class="card-video-author-full">
+                <p>Auteur : {{ video.author }}</p>
+            </div>
+
+            <div class="card-video-description-full">
+                <p>Catégorie : {{ video.description }}</p>
+            </div>
+
+            <div class="card-video-player">
+                {{ video.url|youtube_player|raw }}
+            </div>
+
+            <div class="card-video-url-full">
+                <p><a target="_blank" href="{{ video.url }}">Lien source</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

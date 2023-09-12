@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/youtube.css">
+{% endblock %}
+
+{% block body %}
+    <div class="container-video">
+        {% for video in videos %}
+            <div class="card-video">
+
+                <div class="card-video-category">
+                    <p>Catégorie : {{ video.category }}</p>
+                </div>
+
+                <div class="card-video-author">
+                    <p>Auteur : {{ video.author }}</p>
+                </div>
+
+                <div class="card-video-description">
+                    <p>Catégorie : {{ video.description }}</p>
+                </div>
+
+                <div class="card-video-thumbnail">
+                    <a href="{{ path('youtube.show', {id: video.id }) }}"><img src="{{ video.url|youtube_thumbnail }}" alt="oops"></a>
+                </div>
+
+                <div class="card-video-url">
+                    <p><a target="_blank" href="{{ video.url }}">Lien source</a></p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

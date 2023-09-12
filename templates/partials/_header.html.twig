@@ -3,6 +3,8 @@
     <nav class="navbar" id="navbar">
         <a href="{{ path('home') }}" class="{% if app.request.get('_route') == 'home' %}link-active{% endif %}">Accueil</a>
 
+        <a href="{{ path('youtube') }}" class="{% if app.request.get('_route') == 'youtube' %}link-active{% endif %}">Vidéos</a>
+
         <a href="{{ path('games') }}" class="{% if app.request.get('_route') == 'games' %}link-active{% endif %}">Games</a>
 
         {% if app.user %}
@@ -30,6 +32,7 @@
 
         <div class="menu-deroulant">
             <a href="{{ path('home') }}">Accueil</a>
+            <a href="{{ path('youtube') }}">Vidéos</a>
             <a href="{{ path('games') }}">Games</a>
             {% if app.user %}
                 {% if 'ROLE_ADMIN' in app.user.roles %}
