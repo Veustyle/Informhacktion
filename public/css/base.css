@@ -29,7 +29,7 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    height: 25px;
+    height: 40px;
     transition: all .5s ease-in-out;
     background-color: lightgray;
     z-index: 50;
@@ -38,12 +38,12 @@ p {
 .navbar a {
     position: relative;
     background-color: lightgray;
-    padding: 2px;
+    padding: 5px;
     text-decoration: none;
     border-radius: 6px;
     transition: all .5s ease-in-out;
     color: black;
-    margin: 0 25px 10px 0px;
+    margin: 5px 25px 10px 0px;
 }
 .navbar a:visited {
     text-decoration: none;
@@ -94,7 +94,7 @@ p {
 .menu1, .menu2 {
     position: absolute;
     right: 30px;
-    top: 5px;
+    top: 10px;
     z-index: 70;
 }
 #svg-exit:hover {
@@ -104,12 +104,12 @@ p {
     position: fixed;
     height: 25px;
     width: 25px;
-    fill: grey;
+    fill: black;
     transition: fill .7s ease-in-out;
     cursor: pointer;
 }
 .menu-svg svg:hover {
-    fill: black;
+    fill: white;
 }
 .menu-deroulant {
     position: fixed;
@@ -127,9 +127,12 @@ p {
 .menu-deroulant svg {
     height: 20px;
     width: 20px;
-    fill: grey;
+    fill: whitesmoke;
     transition: fill .7s ease-in-out;
     align-self: end;
+}
+#svg-exit {
+    fill: grey;
 }
 .menu-deroulant a {
     display: flex;
@@ -177,8 +180,8 @@ p {
     box-shadow: 0px 0px 0px 7px #bebbbb;
     border-radius: 6px;
     background-color: lightgray;
-    padding: 3px;
-    margin: 40px 20px 0 20px;
+    padding: 7px;
+    margin: 40px 10px 20px 10px;
     border: 1px solid black;
     display: flex;
     justify-content: center;
@@ -187,12 +190,12 @@ p {
 .container-list-games a {
     position: relative;
     background-color: transparent;
-    padding: 2px;
+    padding: 5px;
     text-decoration: none;
     border-radius: 6px;
     transition: all .5s ease-in-out;
     color: black;
-    margin: 5px 10px 5px 10px;
+    margin: 5px 15px 10px 15px;
 }
 .container-list-games a:visited {
     text-decoration: none;

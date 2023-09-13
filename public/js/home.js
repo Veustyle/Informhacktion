@@ -17,7 +17,7 @@ window.addEventListener('scroll', function () {
    const scrollTop = window.scrollY || this.document.documentElement.scrollTop;
 
    if (scrollTop > (lastScrollTop)) {
-      navbar.style.top = '-30px';
+      navbar.style.top = '-45px';
       footer.style.bottom = '0';
    } else {
       navbar.style.top = '0';
