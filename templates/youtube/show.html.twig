@@ -26,7 +26,9 @@
             <div class="card-video-url-full">
                 <p><a target="_blank" href="{{ video.url }}">Lien source</a></p>
             </div>
-            {% include 'partials/_like.html.twig' %}
+            <div style="position: relative; transform: translateY(-25px)">
+                {% include 'partials/_like.html.twig' %}
+            </div>
         </div>
     </div>
 {% endblock %}
