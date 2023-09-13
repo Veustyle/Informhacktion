@@ -5,38 +5,32 @@
 {% endblock %}
 
 {% block body %}
-    {% if videos|length > 0 %}
-        <p>{{ videos|length }} Vidéos</p>
-    {% endif %}
-    <div style="text-align: center; margin: 30px;">
-        {% if previous >= 0 %}
-            <a href="{{ path('youtube', { offset: previous }) }}">Page Précédente</a>
-        {% endif %}
 
-        {% if next < videos|length %}
-            <a href="{{ path('youtube', { offset: next }) }}">Page Suivante</a>
-        {% endif %}
-    </div>
+    {% include 'partials/_list-videos.html.twig' %}
+    {% include 'partials/_pagination.html.twig' %}
+
     <div class="container-video">
         {% for video in videos %}
             <div class="card-video">
 
+                {% include 'partials/_like.html.twig' %}
+
                 <div class="card-video-category">
-                    <p>Catégorie : {{ video.category }}</p>
+                    <p><b>Catégorie :</b> {{ video.category }}</p>
                 </div>
 
                 <div class="card-video-author">
-                    <p>Auteur : {{ video.author }}</p>
+                    <p><b>Auteur :</b> {{ video.author }}</p>
                 </div>
 
                 <div class="card-video-description">
-                    <p>Description : {{ video.description }}</p>
+                    <p><b>Description :</b> {{ video.description }}</p>
                 </div>
 
                 <div class="card-video-thumbnail">
                     <a href="{{ path('youtube.show', {id: video.id }) }}"><img src="{{ video.url|youtube_thumbnail }}" alt="oops"></a>
                 </div>
-
+                <i class="fa-regular fa-thumbs-up"></i>
                 <div class="card-video-url">
                     <p><a target="_blank" href="{{ video.url }}">Lien source</a></p>
                 </div>

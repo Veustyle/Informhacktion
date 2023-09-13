@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\YoutubeRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: YoutubeRepository::class)]
@@ -24,6 +26,15 @@ class Youtube
 
     #[ORM\Column(length: 255)]
     private ?string $description = null;
+
+    #[ORM\OneToMany(mappedBy: 'ToYoutube', targetEntity: Like::class)]
+    private Collection $likes;
+
+
+    public function __construct()
+    {
+        $this->likes = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -77,4 +88,35 @@ class Youtube
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, Like>
+     */
+    public function getLikes(): Collection
+    {
+        return $this->likes;
+    }
+
+    public function addLike(Like $like): static
+    {
+        if (!$this->likes->contains($like)) {
+            $this->likes->add($like);
+            $like->setToYoutube($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLike(Like $like): static
+    {
+        if ($this->likes->removeElement($like)) {
+            // set the owning side to null (unless already changed)
+            if ($like->getToYoutube() === $this) {
+                $like->setToYoutube(null);
+            }
+        }
+
+        return $this;
+    }
+
 }

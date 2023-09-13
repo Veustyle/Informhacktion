@@ -8,25 +8,25 @@
     <div class="container-video-full">
         <div class="card-video-full">
 
-            <div class="card-video-category-full">
-                <p>Catégorie : {{ video.category }}</p>
-            </div>
-
-            <div class="card-video-author-full">
-                <p>Auteur : {{ video.author }}</p>
-            </div>
-
-            <div class="card-video-description-full">
-                <p>Description : {{ video.description }}</p>
-            </div>
-
             <div class="card-video-player">
                 {{ video.url|youtube_player|raw }}
             </div>
 
+            <div class="card-video-category-full">
+                <p><b>Catégorie :</b> {{ video.category }}</p>
+            </div>
+
+            <div class="card-video-author-full">
+                <p><b>Auteur : </b>{{ video.author }}</p>
+            </div>
+
+            <div class="card-video-description-full">
+                <p><b>Description : </b>{{ video.description }}</p>
+            </div>
             <div class="card-video-url-full">
                 <p><a target="_blank" href="{{ video.url }}">Lien source</a></p>
             </div>
+            {% include 'partials/_like.html.twig' %}
         </div>
     </div>
 {% endblock %}

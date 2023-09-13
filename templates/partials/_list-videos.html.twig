@@ -1,0 +1,13 @@
+<div class="container-container-list-games">
+
+<div class="container-list-games">
+
+    <a href="{{ path('youtube.category', { category: 'Conscience' }) }}" class="{% if app.request.get('category') == 'Conscience' %}link-active{% endif %}">Conscience</a>
+
+    <a href="{{ path('youtube.category', { category: 'Humour' }) }}" class="{% if app.request.get('category') == 'Humour' %}link-active{% endif %}">Humour</a>
+
+    <a href="{{ path('youtube.category', { category: 'Complotisme' }) }}" class="{% if app.request.get('category') == 'Complotisme' %}link-active{% endif %}">Complotisme</a>
+
+    <a href="{{ path('youtube.category', { category: 'Divers' }) }}" class="{% if app.request.get('category') == 'Divers' %}link-active{% endif %}">Divers</a>
+</div>
+</div>

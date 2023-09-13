@@ -1,4 +1,5 @@
-<div class="container-list-games">
+<div class="container-container-list-games">
+    <div class="container-list-games">
 
     <a href="{{ path('pacman') }}" class="{% if app.request.get('_route') == 'pacman' %}link-active{% endif %}">Pacman</a>
 
@@ -6,5 +7,6 @@
     <a href="{{ path('mmorpg') }}" class="{% if app.request.get('_route') == 'mmorpg' %}link-active{% endif %}">Mmorpg</a>
 
     <a href="{{ path('brickbreaker') }}" class="{% if app.request.get('_route') == 'brickbreaker' %}link-active{% endif %}">Brickbreaker</a>
+    </div>
 
 </div>

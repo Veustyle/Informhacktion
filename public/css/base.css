@@ -169,7 +169,14 @@ p {
     margin: 50px 0 -50px 0;
 }
 /******** LISTE GAMES *******/
+.container-container-list-games {
+    display: flex;
+    justify-content: center;
+}
 .container-list-games {
+    box-shadow: 0px 0px 0px 7px #bebbbb;
+    border-radius: 6px;
+    background-color: lightgray;
     padding: 3px;
     margin: 40px 20px 0 20px;
     border: 1px solid black;
@@ -185,7 +192,7 @@ p {
     border-radius: 6px;
     transition: all .5s ease-in-out;
     color: black;
-    margin: 5px 5px 5px 5px;
+    margin: 5px 10px 5px 10px;
 }
 .container-list-games a:visited {
     text-decoration: none;

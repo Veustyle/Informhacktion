@@ -34,28 +34,15 @@ class YoutubeRepository extends ServiceEntityRepository
         return new Paginator($query);
     }
 
-//    /**
-//     * @return Youtube[] Returns an array of Youtube objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('y')
-//            ->andWhere('y.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('y.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+   public function findByCategory (string $category, int $offset) {
+      $query = $this->createQueryBuilder('c')
+         ->andWhere('c.category = :category')
+         ->setParameter('category', $category)
+         ->setMaxResults(self::PAGINATOR_PER_PAGE)
+         ->setFirstResult($offset)
+         ->getQuery()
+      ;
 
-//    public function findOneBySomeField($value): ?Youtube
-//    {
-//        return $this->createQueryBuilder('y')
-//            ->andWhere('y.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+      return new Paginator($query);
+   }
 }

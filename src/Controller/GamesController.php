@@ -20,6 +20,7 @@ class GamesController extends AbstractController
    #[Route('/pacman', name: 'pacman')]
    public function pacman(): Response
    {
+      $this->addFlash('games', 'yes');
       return $this->render('games/pacman.html.twig', [
          'title' => 'Pacman',
          'h1' => 'Pacman'
@@ -29,6 +30,7 @@ class GamesController extends AbstractController
    #[Route('/mmorpg', name: 'mmorpg')]
    public function mmorpg(): Response
    {
+      $this->addFlash('games', 'yes');
       return $this->render('games/mmorpg.html.twig', [
          'title' => 'Mmorpg',
          'h1' => 'Mmorpg'
@@ -38,6 +40,7 @@ class GamesController extends AbstractController
    #[Route('/brickbreaker', name: 'brickbreaker')]
    public function brickbreaker(): Response
    {
+      $this->addFlash('games', 'yes');
       return $this->render('games/brickbreaker.html.twig', [
          'title' => 'Brickbreaker',
          'h1' => 'Brickbreaker'
