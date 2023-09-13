@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/youtube.css">
+{% endblock %}
+
+{% block body %}
+
+    {% include 'partials/_list-videos.html.twig' %}
+
+    {% if videos|length > 0 %}
+        <p>{{ videos|length }} Vidéos</p>
+    {% endif %}
+    <div style="text-align: center; margin: 30px;">
+        {% if previous >= 0 %}
+            <a href="{{ path('youtube.category', { offset: previous, category: app.request.get('category') }) }}">Page Précédente</a>
+        {% endif %}
+
+        {% if next < videos|length %}
+            <a href="{{ path('youtube.category', { offset: next, category: app.request.get('category') }) }}">Page Suivante</a>
+        {% endif %}
+    </div>
+
+    <div class="container-video">
+        {% for video in videos %}
+            <div class="card-video">
+
+                {% include 'partials/_like.html.twig' %}
+
+                <div class="card-video-category">
+                    <p><b>Catégorie :</b> {{ video.category }}</p>
+                </div>
+
+                <div class="card-video-author">
+                    <p><b>Auteur :</b> {{ video.author }}</p>
+                </div>
+
+                <div class="card-video-description">
+                    <p><b>Description :</b> {{ video.description }}</p>
+                </div>
+
+                <div class="card-video-thumbnail">
+                    <a href="{{ path('youtube.show', {id: video.id }) }}"><img src="{{ video.url|youtube_thumbnail }}" alt="oops"></a>
+                </div>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <div class="card-video-url">
+                    <p><a target="_blank" href="{{ video.url }}">Lien source</a></p>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

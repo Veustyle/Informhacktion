@@ -44,7 +44,7 @@ class YoutubeController extends AbstractController
       $youtubes = $repository->findByCategory($category, $offset);
 
       $this->addFlash('category', 'yes');
-      return $this->render('youtube/index.html.twig', [
+      return $this->render('youtube/category.html.twig', [
          'title' => 'Catégorie ' . $category,
          'h1' => 'Catégorie ' . $category,
          'videos' => $youtubes,

@@ -34,7 +34,8 @@ class YoutubeRepository extends ServiceEntityRepository
         return new Paginator($query);
     }
 
-   public function findByCategory (string $category, int $offset) {
+   public function findByCategory (string $category, int $offset) : Paginator
+   {
       $query = $this->createQueryBuilder('c')
          ->andWhere('c.category = :category')
          ->setParameter('category', $category)
